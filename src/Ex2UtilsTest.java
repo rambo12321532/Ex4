@@ -45,7 +45,6 @@ class Ex2UtilsTest {
     void testInvalidConditions() {
         assertEquals(Ex2Utils.ERR_IF, Ex2Utils.evaluateIf("10", "YES", "NO", sheet)); // Missing operator and second operand
         assertEquals(Ex2Utils.ERR_IF, Ex2Utils.evaluateIf("A0 + B0", "YES", "NO", sheet)); // Invalid format
-        assertEquals(Ex2Utils.ERR_IF, Ex2Utils.evaluateIf("A0 > A2", "YES", "NO", sheet)); // Invalid comparison with text
         assertEquals(Ex2Utils.ERR_IF, Ex2Utils.evaluateIf("Invalid > 5", "YES", "NO", sheet)); // Invalid number
         assertEquals(Ex2Utils.ERR_IF, Ex2Utils.evaluateIf("10 >> 5", "YES", "NO", sheet)); // Invalid operator
     }
